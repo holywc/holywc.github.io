@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<link href="EventBooking.css" rel="stylesheet">
+<link href="nav.css" rel="stylesheet">
+<title>Event Booking</title>
+<html style="font-family: Arial,sans-serif">
+    <div id="mobile">
+        <header class="top-header">
+            <h1>HIVE Hotel</h1>
+            <div class="hamburger-icon">
+            <label for="checkbox-menu"></label>
+            </div>
+        </header>
+    <input id="checkbox-menu" type="checkbox">
+    <nav class="mobile-menu">
+        <ul>
+            <li style="font-size:150%"><a class="hotel" href="../WEICONG/page1(1).html">HIVE</a></li>
+            <li><a href="../alex/Events.html">Events</a></li>
+            <li><a href="../alex/Promotions.html">Promotions</a></li>
+            <li><a href="../shawn/facilities1.html">Facilities</a></li>
+            <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+            <li><a href="../IAN/restrauant1.html">Dining</a></li>
+            <li><a href="" class="book"> BOOK NOW</a></li>
+        </ul>
+    </nav>
+    </div>
+    <nav id="header">
+        <div>
+            <ul>
+        <li style="font-size:150%"><a class="hotel" href="#">HIVE</a></li>
+        <li><a href="./Events.html" id="word">Events</a></li>
+        <li><a href="./Promotions.html">Promotions</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Rooms</a></li>
+        <li><a href="#">Dining</a></li>
+        <li><a href="#" class="book"> BOOK NOW</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="form">
+        <h1>
+            Event Booking
+        </h1>
+    </div>
+    <form method="get">
+        <fieldset>
+            <h2>Event Details</h2>
+            <hr>
+                <label for="event" class="event">Event Type</label>
+                <select id="event" name="event">
+                    <option value="wedding">Weddings</option>
+                    <option value="dinner">Corporate Dinners</option>
+                    <option value="meeting">Meetings</option>
+                </select>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="start">
+                <p id="time">to</p>
+                <input type="time" id="time" name="finish">
+                <label for="pax">Expected Attendees</label>
+                <input type="number" id="pax" name="pax">
+                <label for="desc">Description</label>
+                <textarea id="desc" name="desc" placeholder="Describe your event"></textarea>
+            <h2>Contact</h2>
+            <hr>
+            <div id="contact">
+                <label for="fname" class="fname">First Name</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+                <input type="submit" value="Submit" onclick="submitted()">
+        </fieldset>
+    </form>
+    <script>
+        function submitted() {
+            alert("Submission complete. We will follow up on your booking in 3-5 business days. Thank you for choosing HIVE Hotel!")
+        }
+    </script>
+</html>

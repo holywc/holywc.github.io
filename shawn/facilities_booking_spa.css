@@ -1,0 +1,394 @@
+.title_cont{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+.title{
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    filter: brightness(70%);
+    object-fit: cover;
+    object-position: 100% 80%;
+    display: flex;
+    }
+.h1{
+    position: relative;
+    top: 100px;
+    font-size: 400%;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    }
+.container{
+    position: absolute;
+    width: 100%;
+    background-color: aqua;
+    top: 380px;
+    display: flex;
+    justify-content: center;
+}
+.book_cont{
+    position: absolute;
+    width: 1400px;
+    height: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.book_reco_cont{
+    position: relative;
+    width: 320px;
+    height: 940px;
+    background-color: var(--pri_colour);
+    top: 20px;
+    left: 10px;
+    display: inline;
+    
+}
+
+
+.book_reco_card_cont{
+position: relative;
+padding: 10px;
+background-color: white;
+margin-bottom: 20px;
+width: 280px;
+left:10px;
+}
+.book_reco_card_cont img{
+    position: relative;
+    width:280px ;
+}
+.recoTitle{
+    position: relative;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+}
+#card_title{
+    margin-top: 20px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.booking_sec{
+    position: relative;
+    top: 20px;
+    width: 900px;
+    height: 940px;
+    background-color: var(--pri_colour);
+}
+.book_img{
+    position: absolute;
+    margin: 20px;
+    width: 860PX;
+    object-fit: cover;
+    height: 500px;
+}
+.arrowLeft, .arrowRight{
+    position: absolute;
+    top: 250px;
+    background-color: rgba(240, 248, 255, 0);
+    border: 0;
+    font-size: 50px;
+    text-shadow: 5px 5px 5px black;
+}
+
+.arrowLeft{
+    left:10px
+}
+.arrowRight{
+    left: 860px;
+}
+.booking_sec p{
+    top: 520px ;
+    position: relative;
+    margin: 20px;
+    font-size: 40px;
+    width: 600px;
+    color: white;
+}
+.booking_sec form{
+    top: 550px;
+    position: relative;
+    margin: 20px;
+    font-size: 25px;
+}
+.booking_sec label{
+    display:inline-block;
+    width: 180px;
+    color: white;
+}
+.booking_sec input,select,option{
+    height: 20px;
+    width: 250px;
+    color: black;
+}
+
+input.submit{
+    position: relative;
+    top: 10px;
+    left: 365px;
+    width: 70px;
+    height: 40px;
+    background-color: var(--highlight);
+    font-weight: bold;
+    color: var(--sec_colour);
+    font-size: 20px;
+    text-shadow: 2px 2px 3px black;
+    border-radius: 10px;
+    border: 0;
+}
+.bookBtn{
+    position: relative;
+    top: 500px;
+    left: 780px;
+    width: 100px;
+    height: 60px;
+    background-color: var(--highlight);
+    font-weight: bold;
+    color: var(--sec_colour);
+    font-size: 20px;
+    text-shadow: 2px 2px 3px black;
+    border-radius: 10px;
+    border: 0;
+}
+.bookBtn:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255);
+    text-underline-offset: 8px
+}
+.feedback{
+    position:absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+.tan{
+    position:absolute;
+    width: 100%;
+    height: 150%;
+    opacity: 0.5;
+    background-color: rgb(0, 0, 0);
+    }
+    
+
+.feedbackBox{
+    position: absolute;
+    width: 400px;
+    height: 260px;
+    background-color: rgb(255, 255, 255);
+    top:900px;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 10%;
+}
+.legend{
+    position: relative;
+    position: relative;
+    padding: 10px;
+    font-size: 30px;
+    background-color: var(--pri_colour);
+    border-radius:10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+}
+.backBtn{
+    position: relative;
+    position: relative;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right:  60px;
+    font-size: 30px;
+    background-color: var(--pri_colour);
+    border-radius:10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    top: 65px;
+    border: 0;
+    color: white;
+}
+.backBtn:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(20, 165, 255);
+    text-underline-offset: 8px;
+}
+.feedbackDes{
+    position: relative;
+    top: 30px;
+    color: black;
+    font-size: 25px;
+    margin: 10px;
+}
+.showFeedback{
+    visibility:visible;
+}
+
+html{
+    background-color: rgb(47, 45, 45);
+}
+@media screen and (max-width: 600px) {
+    .title_cont{
+        top:20px;
+        width: 100%;
+    }
+    .h1{
+        font-size: 300%;
+    }
+    
+    .book_reco_card_cont,.book_reco_cont, #card_title{
+        visibility: hidden;
+    }
+    .booking_sec{
+        position: absolute;
+        width: 450px;
+    }
+    .book_img{
+        width:410px ;
+        height: 300px;
+    }
+    .arrowLeft, .arrowRight{
+        position: absolute;
+        top: 150px;
+        background-color: rgba(240, 248, 255, 0);
+        border: 0;
+        font-size: 50px;
+        text-shadow: 5px 5px 5px black;
+        
+    }
+    .arrowLeft{
+        left:10px
+        
+    }
+    .arrowRight{
+        left: 415px;
+    }
+    .booking_sec p{
+        top: 320px ;
+        position: relative;
+        margin: 20px;
+        font-size: 40px;
+        width: 410px;
+        color: white;
+    }
+    .booking_sec form{
+        color: white;
+        top: 330px;
+        position: relative;
+        margin: 20px;
+        font-size: 25px;
+    }
+    .booking_sec label{
+        display:inline-block;
+        width: 180px;
+    }
+    .booking_sec input,select,option{
+        height: 20px;
+        width: 250px;
+        color: black;
+    }
+    
+    input.submit{
+        position: relative;
+        top: 10px;
+        left: 365px;
+        width: 70px;
+        height: 40px;
+        background-color: var(--highlight);
+        font-weight: bold;
+        color: var(--sec_colour);
+        font-size: 20px;
+        text-shadow: 2px 2px 3px black;
+        border-radius: 10px;
+        border: 0;
+    }
+    .bookBtn{
+        position: relative;
+        top: 350px;
+        left: 320px;
+        width: 100px;
+        height: 60px;
+        background-color: var(--highlight);
+        font-weight: bold;
+        color: var(--sec_colour);
+        font-size: 20px;
+        text-shadow: 2px 2px 3px black;
+        border-radius: 10px;
+        border: 0;
+    }
+    .bookBtn:hover{
+        text-decoration: underline;
+        text-decoration-color: rgb(255, 255, 255);
+        text-underline-offset: 8px
+    }
+    .feedback{
+        position:absolute;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .tan{
+        position:absolute;
+        width: 100%;
+        height: 140%;
+        opacity: 0.5;
+        background-color: rgb(0, 0, 0);
+        }
+        
+    
+    .feedbackBox{
+        position: absolute;
+        width: 400px;
+        height: 260px;
+        background-color: rgb(255, 255, 255);
+        top:900px;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        border-radius: 10%;
+    }
+    .legend{
+        position: relative;
+        position: relative;
+        padding: 10px;
+        font-size: 30px;
+        background-color: var(--pri_colour);
+        border-radius:10px;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px black;
+    }
+    .backBtn{
+        position: relative;
+        position: relative;
+        padding: 10px;
+        padding-left: 60px;
+        padding-right:  60px;
+        font-size: 30px;
+        background-color: var(--pri_colour);
+        border-radius:10px;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px black;
+        top: 65px;
+        border: 0;
+    }
+    .backBtn:hover{
+        text-decoration: underline;
+        text-decoration-color: rgb(20, 165, 255);
+        text-underline-offset: 8px;
+    }
+    .feedbackDes{
+        position: relative;
+        top: 30px;
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+        margin: 10px;
+    }
+    .showFeedback{
+        visibility:visible;
+    }
+}

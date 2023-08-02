@@ -1,0 +1,262 @@
+
+
+
+
+
+
+.bgp {
+    width:100%;
+    filter:brightness(60%);
+    height: 500px;;
+  
+}
+
+.bgs {
+    
+    color:white;
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform:translate(-50%,50%);
+    font-size: 300%;
+    
+}
+
+.Intro {
+    margin-top: 7%;
+    text-align: center;
+    font-size: 105%;
+    color: rgb(155, 120, 74);
+    background-color: white;
+    padding-bottom: 20px;
+    
+    
+}
+
+
+
+.Intro p{
+    color:black;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 110%;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 7%;
+
+
+}
+
+
+.begin{
+
+   text-align: center;
+   color: rgb(41, 36, 36);
+    margin-top: 20px;
+
+   
+
+  }
+
+  .C2{
+    background-color: #e9ebf6;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+
+  .carrier{
+    text-align: center;
+    color: rgb(155, 120, 74);
+    margin-top: 10%;
+    margin-bottom: 1.5%;
+    font-size: 150%;
+    
+
+  }
+
+  .carrierp2{
+    text-align: center;
+    margin-bottom: 7%;
+    font-size: 110%;
+
+
+  }
+
+  
+
+
+* {
+    
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color:white;
+    font-family: Arial;
+  }
+  
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .h1 {
+    font-size: 500px;
+    word-break: break-all;
+  }
+  
+  .row {
+    margin: 8px -16px;
+    background-color: #e9ebf6
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 15px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.3333%;
+    
+    
+    
+  }
+
+  .column h3 {
+    text-align: center;
+    font-size: 100%;
+  }
+
+    
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+
+
+  }
+  .content1 {
+    background-color: white;
+    height: 750%;
+    
+  }
+  .para{
+    width: 425px;
+    height:400px;
+    
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+  button{
+   
+    padding: 5px 20px;
+    font-size: large;
+    background-color: rgb(35,35,126);
+    color: white;
+    left: 50%;
+    margin-bottom: 5%;
+    
+
+ 
+
+
+  }
+
+  button:hover {
+    background-color: darkgrey;
+  }
+
+  
+
+
+
+  /*Shadow background */
+  .container2 {
+    position: relative;
+    max-width: 800px; /* Maximum width */
+    margin-left: 10%;
+    margin-top: 10px;
+    
+  }
+  
+  .container2 {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+
+  .container2 .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+   
+  }
+
+
+  .iterdes  {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 150%;
+    color: rgb(155, 120, 74);
+   
+
+  }
+
+   .iterdes2{
+      color: black;
+      margin-top: 2%;
+
+  }
+
+  #Restaurants{
+    margin-top: 5%;
+   
+    
+  }
+
+  #text{
+    margin-bottom: 5%;
+  }
+
+  #booking{
+    
+    width: 80%;
+    height: 20%;
+    margin-left: 155px;
+    margin-bottom: 10%; 
+  }
+  
+
+  
+
+

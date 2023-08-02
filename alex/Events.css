@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    padding-bottom: 200px;
+    text-align: center;
+}
+#mobile {
+    text-align: left;
+}
+img {
+    width: 100%;
+    z-index: 3;
+}
+#main h1 {
+    padding: 50px 50px 20px 50px;
+}
+table {
+    display: inline-block;
+    border-collapse: collapse;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+td {
+    height: 225px;
+    width: 450px;
+    background-color: rgb(233, 230, 230);
+    vertical-align: top;
+}
+.main p {
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+.table img {
+    height: 225px;
+}
+#eventbook {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--highlight);
+}
+#eventbook:hover {
+    background-color: rgb(22, 127, 192);
+}
+p {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+table p, footer {
+    text-align: left;
+    padding: 10px;
+}
+h3 {
+    padding-top: 5px;
+}
+footer {
+    font-size: 18px;
+}

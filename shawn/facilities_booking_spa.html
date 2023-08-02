@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="facilities_booking_spa.css">
+    <link rel="stylesheet" href="universal_style.css">
+
+</head>
+<body>
+    <div id="mobile">
+        <header class="top-header">
+          <h1>HIVE Hotel</h1>
+          <div class="hamburger-icon">
+            <label for="checkbox-menu"></label>
+          </div>
+        </header>
+    <input id="checkbox-menu" type="checkbox">
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="../alex/Events.html">Events</a></li>
+        <li><a href="../Promotions.html">Promotions</a></li>
+        <li><a href="../shawn/facilities1.html">Facilities</a></li>
+        <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+        <li><a href="../IAN/restrauant1.html">Dining</a></li>
+      </ul>
+    </nav>
+    </div>
+    <nav id="header">
+        <div>
+            <ul>
+                <li style="font-size:150%"><a class="hotel" href="../WEICONG/page1(1).html">HIVE</a></li>
+                <li><a href="../alex/Events.html">Events</a></li>
+                <li><a href="../alex/Promotions.html">Promotions</a></li>
+                <li><a href="../shawn/facilities1.html">Facilities</a></li>
+                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="../IAN/restrauant1.html">Dining</a></li>
+                <li><a href="" class="book"> BOOK NOW</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="title_cont">
+        <img class="title" src="img/pool.png">
+        <h1 class="h1">Facilities Booking</h1>
+    </div>
+
+    <div class="container">
+        <div class="book_cont">
+            <div class="book_reco_cont">
+                <p id="card_title">Recommendations</p>
+                <a href="../shawn/facilities_booking_gym.html">
+                    <div class="book_reco_card_cont">
+                        <img src="img/gym1.png">
+                        <p class="recoTitle">Gym</p>
+                    </div>
+                    </a>
+                    <a href="#">
+                        <div class="book_reco_card_cont">
+                            <img src="img/bar.jpg">
+                            <p class="recoTitle">Bar</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="book_reco_card_cont">
+                            <img src="img/food.jpg">
+                            <p class="recoTitle">Restrauant</p>
+                        </div>
+                    </a>
+            </div>
+            <div class="booking_sec">
+                <img class="book_img" name="slides">
+                <button onclick="moveLeft()" class="arrowLeft" style="color: white;"><</button>
+                <button onclick="moveRight()" class="arrowRight" style="color: white;">></button>
+
+                
+                <p>SPA MASSAGE</p>
+                <p style="font-size: 20px;">Visit our serene hotel spa for the ultimate relaxation. Enjoy various massages like Swedish, deep tissue, and Thai techniques. Our skilled therapists will melt away your stress, leaving you feeling renewed and pampered. Experience pure bliss today!</p>
+                <form>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="phone">Phone number: </label>
+                    <input type="text" id="phone" name="phone"><br>
+                    <label for="date">Date: </label>
+                    <input type="date" id="date" name="date"><br>
+                    <label for="time">Time:</label>
+                    <select id="time" name="time">
+                        <option value="9am-10am">9am-10am</option>
+                        <option value="10am-11am">10am-11am</option>
+                        <option value="11am-12pm">11am-12pm</option>
+                        <option value="6pm-7pm">6pm-7pm</option>
+                        <option value="7pm-8pm">7pm-8pm</option>
+                        <option value="8pm-9pm">8pm-9pm</option>
+                    </select><br>
+                </form>
+                <button class="bookBtn" onclick="open_feedback()">BOOK</button>
+            </div>
+        </div>
+    </div>
+    <div class="feedback" id="fb1">
+        <p class="tan"></p>
+        <div class="feedbackBox">
+            <p><span class="legend">THANK YOU</span></p>
+            <p class="feedbackDes">Thank you, <span style="color: black;" id="nameInput"></span> for booking with us, We have confirmed your booking on <span style="color: black;" id="dateInput"></span> for <span style="color: black;" id="timeInput"></span></p>
+            <button class="backBtn" onclick="close_feedback()">OK</button>
+        </div>
+    </div>
+
+
+    <script> 
+
+
+console.log(date)
+        function open_feedback() {
+            var showFB = document.getElementById("fb1");
+            showFB.classList.add("showFeedback");
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+            document.getElementById("nameInput").innerHTML = name;
+            document.getElementById("dateInput").innerHTML = date;
+            document.getElementById("timeInput").innerHTML = time;
+        }
+        function close_feedback() {
+            var showFB = document.getElementById("fb1");
+            showFB.classList.remove("showFeedback");
+        }
+    var i = 0;
+    var images=[];
+    images[0]="img/spa.png";
+    images[1]="img/spa2.png";
+    images[2]="img/spa3.png";
+    document.slides.src = images[0];
+    function moveLeft(){
+        i--;
+        if (i < 0) {
+            i = images.length - 1;
+        }
+        document.slides.src = images[i];
+
+            
+
+    }
+
+        function moveRight(){
+            i++;
+            if (i >= images.length) {
+                i = 0;
+            }
+            document.slides.src = images[i];
+        }
+    </script>    
+
+</body>  
+</html>

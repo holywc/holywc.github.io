@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="universal_style.css">
+    <link rel="stylesheet" href="page1(1).css">
+</head>
+<body>
+
+    <div id="mobile">
+        <header class="top-header">
+            <h1>Company Name</h1>
+            <div class="hamburger-icon">
+                <label for="checkbox-menu"></label>
+            </div>
+        </header>
+        <input id="checkbox-menu" type="checkbox">
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="../alex/Events.html">Events</a></li>
+                <li><a href="../alex/Promotions.html">Promotions</a></li>
+                <li><a href="../shawn/facilities1.html">Facilities</a></li>
+                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="../IAN/restrauant1.html">Dining</a></li>
+            </ul>
+        </nav>
+    </div>
+   
+    <nav id="header">
+        <div>
+            <ul>
+                <li style="font-size:150%"><a class="hotel" href="../WEICONG/page1(1).html">HIVE</a></li>
+                <li><a href="../alex/Events.html">Events</a></li>
+                <li><a href="../alex/Promotions.html">Promotions</a></li>
+                <li><a href="../shawn/facilities1.html">Facilities</a></li>
+                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="../IAN/restrauant1.html">Dining</a></li>
+                <li><a href="../aniq/HotelRoomsReservation.html" class="book"> BOOK NOW</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="pic">
+        <img class='img' id="img1" src="./images/50-most-instagrammable-pools-in-the-world-hero.jpg" alt="" width="100%" height=''>
+                 
+        <h1 class="img_header">HIVE HOTEL</h1>
+
+        <p class="img_para">Our hotel is amazing as it provides many good facilities and a wide variety of different rooms to stay in.</p>
+        
+        <a class="down" href="#content">v</a>
+
+        
+    </div>
+
+    
+
+    <div class="content" id="content">
+
+        <div class="review" style="height:400px;">
+
+            <center><h3>We have the best reviews out of all hotels in singapore!</h3></center>
+
+
+            <center><div>
+                <img src="./images/star.jpg" height="50px" alt="">
+                <img src="./images/star.jpg" height="50px" alt="">
+                <img src="./images/star.jpg" height="50px" alt="">
+                <img src="./images/star.jpg" height="50px" alt="">
+                <img src="./images/star.jpg" height="50px" alt="">
+            </div></center> 
+
+            <center><a class="discover" href="./page2.html">Reviews</a></center>
+            
+        </div>
+
+
+
+        <div class="rooms-suites">
+            <center><h3>ROOMS & SUITES</h3></center> 
+
+
+            <img src="./images/penthouse.1800x1100.jpg" style="width:60%; border:5px solid rgba(0,0,200,0.5)" alt="">
+
+
+            <div class="room">
+                <p>Our rooms are amazing and cool we have the best facilities and clean showers to facilitate our customers.</p>
+                <button class="room-btn" onclick="window.location.href='../aniq/HotelRooms.html'">Suites > </button>
+                <button class="room-btn" onclick="window.location.href='../aniq/HotelRooms.html'">Penthouse > </button>
+                <button class="room-btn" onclick="window.location.href='../aniq/HotelRooms.html'">Luxury > </button>
+                <a href="../aniq/HotelRoomsReservation.html" class="discover">Discover More</a>
+            </div>
+            
+          
+
+        </div>
+
+        <script>
+
+            var rooms = {
+
+                'penthouse1': {'price':300, 'adult':4},
+                'penthouse2':{'price':200, 'adult':6},
+                'penthouse3':{'price':450, 'adult':2},
+
+
+                'luxury1':{'price':550, 'adult':2}, 
+                'luxury2':{'price':675, 'adult':3}, 
+                'luxury3':{'price':895, 'adult':4},
+
+
+                'suite1':{'price':278, 'adult':5}, 
+                'suite2':{'price':498, 'adult':2}, 
+                'suite3':{'price':544, 'adult':4}
+
+            }
+
+
+
+
+
+            function showMenu(num) {
+                var dropdown = document.getElementById('dropdown'+num)
+                
+                if (dropdown.style.opacity == 0) {
+                    dropdown.style.opacity = 1;
+                    
+                }   
+                else {
+                    dropdown.style.opacity = 0;
+                }
+            }
+
+            function Increase(who) {
+
+                var adultvalue = parseInt(document.getElementById(who).innerHTML);
+
+                if (adultvalue < 6) {
+                    adultvalue += 1;
+                    document.getElementById(who).innerHTML = adultvalue;
+                }
+            }
+
+            function Decrease(who) {
+                var adultvalue = parseInt(document.getElementById(who).innerHTML);
+
+                if (adultvalue >= 1) {
+                    adultvalue -= 1;
+                    document.getElementById(who).innerHTML = adultvalue; 
+                }
+            } 
+
+            function button_submit() {
+                var budget = document.getElementById('input').value;
+                var adult = document.getElementById('adult').innerHTML;
+                var children = document.getElementById('child').innerHTML;
+                var room = document.getElementById('rooms').innerHTML;
+                var newbudget = parseInt(budget)/parseInt(room);
+                room_list = [];
+
+                if (budget <= 0) {
+                    var span = document.getElementById('span');
+                    span.innerHTML = "warning no negative numbers";
+                    span.style.color = 'red';
+                    
+                }
+           
+                
+                else {
+                    for (var room in rooms) {
+                        if (rooms[room]['price'] <= newbudget && adult == rooms[room]['adult']) {
+                            room_list.push(room);
+                        }
+
+
+                    }
+
+                    
+
+                    document.getElementById('span').innerHTML = room_list;
+                    document.getElementById('span').style.color = 'black';
+            }
+        }
+
+
+
+
+        </script>
+
+    
+
+
+        <div class="js">
+
+            <center><h3 style="padding:10px;">Find your room!</h3></center>
+
+            <center><p>Use the sytem below to find out the best rooms which we recommend you based on your requirements!</p></center>
+
+            <br><br>
+
+            
+            <center><p>Adults</p></center>
+            <div class="dropdown">
+
+                <button class="js-btn" onclick="Decrease('adult')" style="top: 50%; left:35%;">-</button>
+                <center><p class="select" id="adult">1</p></center>  
+                <button class="js-btn" onclick="Increase('adult')" style="top:50%; right:35%">+</button>
+
+                
+            
+            </div>
+
+            <center><p>Children </p></center>
+            <div class="dropdown">
+
+                <button class="js-btn" onclick="Decrease('child')" style="top: 50%; left:35%;">-</button>
+                <center><p class="select" id="child">0</p></center>  
+                <button class="js-btn" onclick="Increase('child')" style="top:50%; right:35%">+</button>
+
+            </div>
+
+
+            <center><p>Rooms</p></center>
+            <div class="dropdown">
+                <button class="js-btn" onclick="Decrease('rooms')" style="top: 50%; left:35%;">-</button>
+                <center><p class="select" id="rooms">1</p></center>  
+                <button class="js-btn" onclick="Increase('rooms')" style="top:50%; right:35%">+</button>
+
+            </div>
+
+            <div class="dropdown">
+                <center><p>Budget (total)</p></center>
+                <input type="text" id="input" class="select">
+            </div>
+
+            <Center><a class="discover" onclick="button_submit()" id="submit-btn">submit</a></Center>
+
+            <br><br><br><br>
+
+            <center><p>Suggested room :</p></center>
+            <center><span id="span"> </span></center>
+            
+
+
+        </div>
+
+
+        <div class="facilities">
+
+            <h3>Explore our facilities</h3>
+
+            <div class="scroll-horizontol">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9vbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNwYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                <img src="https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                <img src="https://plus.unsplash.com/premium_photo-1676634832256-e697d849f554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFza2V0YmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVubmlzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            
+            <p style="margin:20px">Was it enough? That was the question he kept asking himself. Was being satisfied enough? He looked around him at everyone yearning to just be satisfied in their daily life and he had reached that goal. He knew that he was satisfied and he also knew it wasn't going to be enough.The young man wanted a role model. He looked long and hard in his youth, but that role model never materialized. His only choice was to embrace all the people in his life he didn't want to be like.</p>
+            <center><a href="../shawn/facilities1.html" class="discover" >Discover More</a></center>
+
+        </div>
+
+       
+        
+
+
+        <div class="footer">
+
+            <div class="socials">
+                <p><strong>Follow Us</strong></p>
+                <a href="https://twitter.com/"><img src="https://cdn.freebiesupply.com/logos/large/2x/twitter-3-logo-png-transparent.png" alt="" class="icon"></a>
+                <a href="https://www.youtube.com/"></a><img src="https://cdn.freebiesupply.com/logos/large/2x/youtube-icon-logo-png-transparent.png" alt="" class="icon"></a>
+                <a href="https://www.facebook.com/"></a><img src="https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.png" alt="" class="icon"></a>
+                <a href="https://www.instagram.com/"></a><img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-white-full-gradient-colour-background-900x900.png" alt="" class="icon"></a>
+        
+                <hr>
+        
+                <p><strong>Contact Us</strong></p>
+                    
+                <img src="https://www.freeiconspng.com/thumbs/telephone-icon/mobile-phone-icon-phone-telephone-icon-22.png" alt="" class="icon">
+                <span><strong>+65 12345678</strong></span>
+        
+                <hr>
+        
+                <p><strong>Email Us</strong></p>
+                <img src="https://i.pinimg.com/originals/8f/c3/7b/8fc37b74b608a622588fbaa361485f32.png" alt="" class="icon">
+                <span><strong>Hotelname123@gmail.com</strong></span>
+        
+                <hr>
+        
+                <p><strong>Download Our App</strong></p>
+                <img src="https://assets.stickpng.com/thumbs/5a902db97f96951c82922874.png" alt="" class="icon" style="height:100px; position: relative; bottom:30px">
+                
+                
+
+            </div>
+
+
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.661177583522!2d103.84637377455955!3d1.379955361479203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16eb64b0249d%3A0xe5f10ff680eed942!2sNanyang%20Polytechnic!5e0!3m2!1sen!2ssg!4v1690989288778!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        </div>
+        
+
+    </div>
+
+    
+    
+
+
+
+   
+
+
+    
+
+
+
+
+</body>
+</html>
+
+

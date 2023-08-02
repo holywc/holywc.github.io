@@ -1,0 +1,74 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+html {
+    background-image: url(https://thumbs.dreamstime.com/b/abstract-seascape-palm-tree-tropical-beach-background-abstract-seascape-palm-tree-tropical-beach-background-blur-bokeh-146142855.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+@media screen and (min-width: 600px) {
+    #main h1 {
+        text-align: center;
+        padding: 125px 50px 20px 50px;
+    }
+    .mobile {
+        visibility: collapse;
+        position: absolute;
+    }
+}
+@media screen and (max-width: 600px) {
+    #main h1 {
+        text-align: center;
+        padding: 75px 50px 20px 50px;
+    }
+    .computer {
+        visibility: collapse;
+        position: absolute;
+    }
+}
+div#promo {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+table {
+    border-spacing: 10px;
+    background-color: white;
+    margin-bottom:20px;
+    table-layout: fixed;
+    width:100%;
+    font-size:20px;
+}
+th {
+    width:300px;
+}
+#main p {
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+.mobile img {
+    height: 275px;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#promo p {
+    text-align: left;
+    padding-top: 5px;
+}
+button {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#more1, #more2, #more3, #more4, #more5, #more6 {
+    display: none;
+}
+
+
+
+

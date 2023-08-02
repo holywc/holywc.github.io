@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <div id="mobile">
+        <header class="top-header">
+            <h1>Company Name</h1>
+            <div class="hamburger-icon">
+                <label for="checkbox-menu"></label>
+            </div>
+        </header>
+        <input id="checkbox-menu" type="checkbox">
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="../alex/Events.html">Events</a></li>
+                <li><a href="../alex/Promotions.html">Promotions</a></li>
+                <li><a href="../shawn/facilities1.html">Facilities</a></li>
+                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="../IAN/restrauant1.html">Dining</a></li>
+            </ul>
+        </nav>
+    </div>
+   
+    <nav id="header">
+        <div>
+            <ul>
+                <li style="font-size:150%"><a class="hotel" href="../WEICONG/page1(1).html">HIVE</a></li>
+                <li><a href="../alex/Events.html">Events</a></li>
+                <li><a href="../alex/Promotions.html">Promotions</a></li>
+                <li><a href="../shawn/facilities1.html">Facilities</a></li>
+                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="../IAN/restrauant1.html">Dining</a></li>
+                <li><a href="#" class="book"> BOOK NOW</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h3>REVIEWS</h3>
+
+    
+
+
+    <div class="write">
+
+        <div>
+            <h2>REVIEWS</h2>
+
+            <H3>Write a review!</H3>
+        </div>
+
+        <div>
+            <img src="./images/star.jpg" id="1" onclick="imgdark(1)" height="50px" alt="">
+            <img src="./images/star.jpg" id="2" onclick="imgdark(2)" height="50px" alt="">
+            <img src="./images/star.jpg" id="3" onclick="imgdark(3)" height="50px" alt="">
+            <img src="./images/star.jpg" id="4" onclick="imgdark(4)" height="50px" alt="">
+            <img src="./images/star.jpg" id="5" onclick="imgdark(5)" height="50px" alt=""> 
+        </div>
+
+        <div class="anny">
+            <label for="checkbox">Annonymous</label>
+            <input type="checkbox" name="checkbox" id="checkbox" onclick="checkboxFunction()">
+        </div>
+        <div class="name">
+            <label for="nametext" id="nametextlabel">Name</label>
+            <input type="text" id="nametext" name="nametext">
+        </div>
+
+        <div>
+            <label for="">Title</label>
+            <input type="text" id="titleinput">
+        </div>
+
+        
+        
+        
+        <div>
+            <textarea name="" id="reviewpara" cols="70" rows="15"></textarea>
+            <button onclick="submitFunction()" class="submit-btn">submit</button>
+        </div>
+            
+        
+    </div>
+
+    <script>
+
+        function imgdark(num) {
+
+            for (var i=1; i<=5; i++) {
+                document.getElementById(i).style.filter = 'saturate(10%)';
+            }
+             
+            for (var i=1; i<=num; i++) {
+                document.getElementById(i).style.filter = 'saturate(10)';
+            }
+
+        }
+
+        function checkboxFunction() {
+            var disabled = document.getElementById('nametext').disabled;
+            
+            if (disabled) {
+                document.getElementById('nametext').disabled = false;
+            }
+
+            if (!disabled) {
+                document.getElementById('nametext').disabled = true;
+            }
+        }
+
+
+        function submitFunction() {
+            var review = document.getElementById('reviewpara').value;
+            
+
+            var title = document.getElementById('titleinput').value;
+        
+
+        
+            var disabled = document.getElementById('nametext').disabled;
+
+            
+
+            if (disabled) {
+                var name = 'annonymous';
+            }
+
+            if (!disabled) {
+                var name = document.getElementById('nametext').value;
+            }
+            
+            var count = 0
+            for (var i=1; i<=5; i++) {
+                if (document.getElementById(i).style.filter == 'saturate(10)') {
+                    count += 1;
+                }
+            
+            }
+
+             
+            
+
+                var newdiv = document.createElement("div");
+                newdiv.className = 'review';
+                document.body.appendChild(newdiv);
+
+                var newpara = document.createElement('p');
+                var newtitle = document.createElement('h3');
+                var newimg = document.createElement('img');
+                var newname = document.createElement('p');
+                newname.innerHTML = name;
+                newpara.innerHTML = review;
+                newtitle.innerHTML = title;
+                newimg.src = "./images/profile.png";
+                newimg.style.height = '50px';
+                newname.style.display = 'inline';
+                newname.style.paddingRight = '20px';
+                
+
+                newdiv.appendChild(newimg);
+                newdiv.appendChild(newname);
+
+                for (var i = 1; i<=count; i++) {
+                    var starimg = document.createElement('img');
+                    starimg.src = "./images/star.jpg";
+                    starimg.style.height = '50px';
+                    starimg.style.filter = 'saturate(10)';
+                    newdiv.appendChild(starimg);
+                }
+
+                for (var i = 1; i<=(5-count); i++) {
+                    var starimg = document.createElement('img');
+                    starimg.src = "./images/star.jpg";
+                    starimg.style.height = '50px';
+                    starimg.style.filter = 'saturate(10%)';
+                    newdiv.appendChild(starimg);
+                }
+
+
+
+
+                
+                newdiv.appendChild(newtitle);
+                newdiv.appendChild(newpara);
+                
+            
+
+
+
+        }
+    </script>
+
+    
+    
+    
+
+    
+    <div class="review">
+        <img src="./images/profile.png" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt=""> 
+
+
+        <h3>i love this hotel !!</h3>
+        <p>She had been told time and time again that the most important steps were the first and the last. It was something that she carried within her in everything she did, but then he showed up and disrupted everything. He tShe had been told time and time again that the most important steps were the first and the last. It was something that she carried within her in everything she did, but then he showed up and disrupted everything. He told her that she had it wrong. The first step wasn't the most important. The last step wasn't the most important. It was the next step that was the most important.old her that she had it wrong. The first step wasn't the most important. The last step wasn't the most important. It was the next step that was the most important.</p>
+    </div>
+    <div class="review">
+        <img src="./images/profile.png" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt=""> 
+        <h3>i love this hotel !!</h3>
+        <p>She had been told time and time again that the most important steps were the first and the last. It was something that she carried within her in everything she did, but then he showed up and disrupted everything. He told her that she had it wrong. The first step wasn't the most important. The last step wasn't the most important. It was the next step that was the most important.She had been told time and time again that the most important steps were the first and the last. It was something that she carried within her in everything she did, but then he showed up and disrupted everything. He told her that she had it wrong. The first step wasn't the most important. The last step wasn't the most important. It was the next step that was the most important.</p>
+    </div>
+    <div class="review">
+        <img src="./images/profile.png" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt="">
+        <img src="./images/star.jpg" height="50px" alt=""> 
+        <h3>i love this hotel !!</h3>
+        <p>She had been told time and time again that the most important steps were the first and the last. It was something that she carried within her in everything she did, but then he showed up and disrupted everything. He told her that she had it wrong. The first step wasn't the most important. The last step wasn't the most important. It was the next step that was the most important.She had been told time and time again that the most important steps were the first and the last. It was something that she carried within her in everything she did, but then he showed up and disrupted everything. He told her that she had it wrong. The first step wasn't the most important. The last step wasn't the most important. It was the next step that was the most important.</p>
+    </div>
+    
+    
+
+
+</body>
+</html>

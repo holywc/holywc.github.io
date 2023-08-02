@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="HotelRoomsReservation.css">*/
+  <link rel="stylesheet" href="universal_styles.css">
+  <title>Hotel Room Booking</title>
+</head>
+<body>
+  <div id="mobile">
+    <header class="top-header">
+        <h1>Company Name</h1>
+        <div class="hamburger-icon">
+            <label for="checkbox-menu"></label>
+        </div>
+    </header>
+    <input id="checkbox-menu" type="checkbox">
+    <nav class="mobile-menu">
+        <ul>
+            <li><a href="../alex/Events.html">Events</a></li>
+            <li><a href="../alex/Promotions.html">Promotions</a></li>
+            <li><a href="../shawn/facilities1.html">Facilities</a></li>
+            <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+            <li><a href="../IAN/restrauant1.html">Dining</a></li>
+        </ul>
+    </nav>
+</div>
+
+<nav id="header">
+    <div>
+        <ul>
+            <li style="font-size:150%"><a class="hotel" href="../WEICONG/page1(1).html">HIVE</a></li>
+            <li><a href="../alex/Events.html">Events</a></li>
+            <li><a href="../alex/Promotions.html">Promotions</a></li>
+            <li><a href="../shawn/facilities1.html">Facilities</a></li>
+            <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+            <li><a href="../IAN/restrauant1.html">Dining</a></li>
+            <li><a href="#" class="book"> BOOK NOW</a></li>
+        </ul>
+    </div>
+</nav>
+  <main>
+    <form>
+      <h2>Make a Booking</h2>
+      <div>
+        <label for="name" >Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="email">Retype Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="check-in">Check-in Date:</label>
+        <input type="date" id="check-in" name="check-in" required>
+      </div>
+      <div>
+        <label for="check-out">Check-out Date:</label>
+        <input type="date" id="check-out" name="check-out" required>
+      </div>
+      <div>
+        <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room-type" required>
+          <option value="">Select a room type</option>
+          <option value="Standard">Standard</option>
+          <option value="Luxury">Luxury</option>
+          <option value="Suite">Suite</option>
+        </select>
+      </div>
+      <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+          <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png">
+          <h2>Thank you!</h2>
+          <p>Your booking is successful.</p>
+          <button type="button"onclick="closePopup()">OK</button>
+        </div>
+      </div>
+    </form>
+  </main>
+
+<script>
+let popup = document.getElementById("popup");
+
+function openPopup (){
+  popup.classlist.add("open-popup");
+}
+function closePopup (){
+  popup.classlist.remove("open-popup");
+}
+
+
+</script>
+</body>
+</html>

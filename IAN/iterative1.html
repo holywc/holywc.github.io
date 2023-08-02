@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="universal_style.css">
+    <link rel="stylesheet" href="restrauant1.css"
+</head>
+<body>
+    <nav id="header">
+        <div>
+            <ul>
+                <li style="font-size:150%"><a class="hotel" href="../WEICONG/page1(1).html">HIVE</a></li>
+                <li><a href="../alex/Events.html">Events</a></li>
+                <li><a href="../alex/Promotions.html">Promotions</a></li>
+                <li><a href="../shawn/facilities1.html">Facilities</a></li>
+                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="../IAN/restrauant1.html">Dining</a></li>
+                <li><a href="" class="book"> BOOK NOW</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <img class="bgp"  src="https://www.thewhitepalace.com//assets/media/PICTURES/White-Palace-Hotel/Homepage/Main-slider/07-the-white-restaurant-fine-dining-white-palace-greece-35160.jpg" alt="Reservations">
+
+    <h3 class="bgs">Book Your Reservations Now</h3>
+
+    <div class="iterdes">
+        <h2>Reservations</h2>
+            <div class="iterdes2">
+                <p>Select the restaurant of your choice and dive into the differnet combinations of flavour and taste
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                 </div>
+            </div>
+
+        <div>
+            
+                
+        <form id="myForm" onsubmit="return showPopup()">
+            <fieldset style="background-color: #e9e9e9" id="booking">
+            <legend></legend>
+            <center>
+            <label for="Restaurants"style="font-size: 30px">Restaurants:</label>
+            <select name="Restaurants"style="font-size: 30px" id="Restaurants">
+                <option value="The Western Plate">The Western Plate</option>
+                <option value="Dynasty Delights">Dynasty Delights</option>
+                <option value="Sushi House">Sushi House</option>
+            </select>
+            <br><br>
+            
+            <label for="date"style="font-size: 30px">Date: </label>
+            <input type="date"style="font-size: 30px" id="date" name="date" />
+            <br><br>
+        
+        
+            <label for="Time"style="font-size: 30px">Time:</label>
+            <input type="Time"style="font-size: 30px" id="Time" name="Time" />
+            <br><br>
+        
+            <label for="Contact Number"style="font-size: 30px">Contact Number:</label>
+            <input type="text"style="font-size: 30px" id="text" name="text">
+            <br><br>
+            <br><br>
+            <button type="submit">Submit</button>
+        </center>
+            </fieldset>
+        </form>
+        </div>
+    </div>
+<script>
+    function showPopup() {
+            alert('Your Reservation Booking Has Been Comfirmed.');
+            window.location.href = 'restrauant1.html';
+            return false;
+    }
+</script>       
+</body>
+</html>

@@ -1,0 +1,156 @@
+.intro{
+    top:50px;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 200%;
+    color: rgb(155, 120, 74);
+}
+#intro_para{
+    margin-top:15px;
+    text-align: center;
+    width: 75%;
+    color: rgb(0, 0, 0);
+}
+   
+.roomCont{
+    position: relative;
+    top:10px;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    
+
+}
+.ppppp{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.ooooo{
+    width: 450px;
+    height: 400px;
+    background-color: grey;
+    margin: 10px;
+    
+}
+.aaa{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center}
+
+.aaaa{
+    position: relative;
+    top :10px;
+    background-color: var(--pri_colour);
+    width: 1000px;
+    height: 920px;
+    right: 12.5px;
+    left: 20px;}
+
+.bbb{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+.bbbb{
+    position: relative;
+    background-color: var(--pri_colour);
+    width: 1000px;
+    height: 920px;
+    left: 19px;}
+
+.ccc{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+.cccc{
+    position: relative;
+    top :1890px;
+    background-color: var(--pri_colour);
+    width: 1000px;
+    height: 920px;
+    left: 19px;
+}
+.img_cont{
+    position: absolute;
+}
+.main_img1{
+    position: relative;
+    width: 450px;
+    height: 250px;
+    object-fit:cover;
+    object-position: 26% 100%;
+}
+
+.main_img2{
+    position: relative;
+    width: 450px;
+    height: 250px;
+    object-fit:cover;
+    object-position: 26% 100%;
+}
+
+.main_img3{
+    position: relative;
+    width: 450px;
+    height: 250px;
+    object-fit:cover;
+    object-position: 70% 100% ;
+}
+
+.sub_img_cont{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sub_img{
+    width: 240px;
+    height: 200px;
+}
+h2{text-decoration: underline;
+   padding-bottom: 20px;}
+
+.text1{
+    color: white;
+    position: relative;
+    width:350px;
+    height: 350px;
+    left: 550px;
+    Top: 67.5px;
+    font-size:25px;
+}
+
+.text2{
+    color: white;
+    position: relative;
+    width:350px;
+    height: 350px;
+    left: 550px;
+    top: 67.5px ;
+    font-size:25px;
+}
+
+.text3{
+    color: white;
+    position: relative;
+    width:350px;
+    height: 350px;
+    left: 550px;
+    top: 67.5px;
+    font-size:25px;
+}
+
+.additional_details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 14px;
+}
+
+.Price{color:  rgb(35,35,126);}

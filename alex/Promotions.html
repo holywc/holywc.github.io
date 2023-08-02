@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<link href="Promotions.css" rel="stylesheet">
+<link href="nav.css" rel="stylesheet">
+<title>Promotions</title>
+<html style="font-family: Arial,sans-serif">
+    <div id="mobile">
+        <header class="top-header">
+          <h1>HIVE Hotel</h1>
+          <div class="hamburger-icon">
+            <label for="checkbox-menu"></label>
+          </div>
+        </header>
+    <input id="checkbox-menu" type="checkbox">
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="./Events.html">Events</a></li>
+        <li><a href="./Promotions.html">Promotions</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Rooms</a></li>
+        <li><a href="#">Dining</a></li>
+      </ul>
+    </nav>
+</div>
+    <nav id="header">
+        <div>
+            <ul>
+        <li style="font-size:150%"><a class="hotel" href="#">HIVE</a></li>
+        <li><a href="./Events.html" id="word">Events</a></li>
+        <li><a href="./Promotions.html">Promotions</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Rooms</a></li>
+        <li><a href="#">Dining</a></li>
+        <li><a href="#" class="book"> BOOK NOW</a></li>
+            </ul>
+        </div>
+    </nav>
+<div id="main">
+    <h1>
+        Special Offers
+    </h1>
+        <p>Check out our available offers. Don't miss out on our special discounts and packages!</p>
+    <div id="promo">
+        <div class="computer">
+        <table>
+            <tr>
+                <th><img src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg" width="300px" height="200px"></th>
+                <td style="vertical-align:top;"><h3>Breakfast Package</h3><span>Start the day right with a hearty breakfast before you embark on your daily adventure.<br>One free breakfast voucher for each day of your stay.</span><p id="more1"><br>Breakfast voucher allows access to *hotel's* breakfast buffet.<br>Each voucher allows entry for only 1 person.<br>Breakfast Timings: 6am - 10am</p><br>
+                <button onclick="readmore(1)" id="button1">Read More</button></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th><img src="https://www.elitesingles.com.au/wp-content/uploads/sites/77/2020/06/170301_el_gb_ta_teaser_01_0-350x264.png" width="300px" height="200px"></th>
+                <td style="vertical-align: top;"><h3>Valentines Dinner Discount</h3><span>20% discount for our in-house restaurant if you dine in with a significant other during Valentine's week.</span><p id="more2"><br>Only valid when dining with 1 other person.<br>No minimum spend required.</p><br>
+                <button onclick="readmore(2)" id="button2">Read More</button></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th><img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg" width="300px" height="200px"></th>
+                <td style="vertical-align:top;"><h3>Early Bird Discount</h3><span>Book your stay in advance for a 10% discount off the normal price.</span><p id="more3"><br>Only valid for boookings at least 3 months in advance.<br>Minimum stay of 3 nights.<br>10% Discount only applies for total room price pre-tax.</p><br>
+                <button onclick="readmore(3)" id="button3">Read More</button></td>
+            </tr>
+        </table>
+        </div>
+        <div class="mobile">
+            <table>
+                <tr>
+                    <td><img src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"></td>
+                </tr>
+                <tr>
+                    <td><h3>Breakfast Package</h3><p>Start the day right with a hearty breakfast before you embark on your daily adventure.<br>One free breakfast voucher for each day of your stay.</p><p id="more4">Breakfast voucher allows access to *hotel's* breakfast buffet.<br>Each voucher allows entry for only 1 person.<br>Breakfast Timings: 6am - 10am</p><br>
+                        <button onclick="readmore(4)" id="button4">Read More</button></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="https://www.elitesingles.com.au/wp-content/uploads/sites/77/2020/06/170301_el_gb_ta_teaser_01_0-350x264.png"></td>
+                </tr>
+                <tr>
+                    <td><h3>Valentines Dinner Discount</h3><p>20% discount for our in-house restaurant if you dine in with a significant other during Valentine's week.</p><p id="more5">Only valid when dining with 1 other person.<br>No minimum spend required.</p><br>
+                    <button onclick="readmore(5)" id="button5">Read More</button></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg"></td>
+                </tr>
+                <tr>
+                    <td><h3>Early Bird Discount</h3><p>Book your stay in advance for a 10% discount off the normal price.</p><p id="more6">Only valid for boookings at least 3 months in advance.<br>Minimum stay of 3 nights.<br>10% Discount only applies for total room price pre-tax.</p><br>
+                    <button onclick="readmore(6)" id="button6">Read More</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function readmore(num) {
+            var more = document.getElementById("more"+num);
+            var button = document.getElementById("button"+num);
+            
+            if (more.style.display == "inline") {
+                more.style.display = "none";
+                button.innerHTML = "Read More";
+            }
+            else {
+                more.style.display = "inline";
+                button.innerHTML = "Read Less"
+            }
+        }
+    </script>
+</div>
+</html>

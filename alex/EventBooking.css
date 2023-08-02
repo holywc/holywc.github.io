@@ -1,0 +1,64 @@
+* {
+    margin:0px;
+    padding: 0px;
+}
+html {
+    background-image: url(https://www.raffles.com/assets/0/72/651/652/1701/1956a28f-79ce-4d7c-a02a-b4d1cb2d81ef.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+@media screen and (min-width: 600px) {
+    #form h1 {
+        text-align: center;
+        padding: 125px 50px 0px 50px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #form h1 {
+        text-align: center;
+        padding: 75px 50px 0px 50px;
+    }
+}
+form {
+    padding: 5% 20%;
+}
+fieldset {
+    padding:20px;
+    box-shadow: 0 4px 8px 0 darkblue;
+    background-color: white;
+}
+label,input {
+    display:block;
+}
+input,select,textarea {
+    width:auto;
+    padding:10px;
+    margin: 8px 0;
+}
+.event,.fname {
+    padding-top: 20px;
+}
+#time {
+    width:8%;
+    display: inline-block;
+}
+p#time {
+    width:15px;
+}
+#desc {
+    width:95%;
+    height:200px;
+}
+div input {
+    min-width: 25%;
+}
+input[type="submit"] {
+    float: right;
+    min-width:15%;
+    margin-right: 20px;
+}
+
+
+
