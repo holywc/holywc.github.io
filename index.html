@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel</title>
-    <link rel="stylesheet" href="../WEICONG/universal_style.css">
-    <link rel="stylesheet" href="../WEICONG/page1(1).css">
+    <link rel="stylesheet" href="universal_style.css">
+    <link rel="stylesheet" href="page1(1).css">
 </head>
 <body>
 
     <div id="mobile">
         <header class="top-header">
-            <h1>Company Name</h1>
+            <h1>HIVE</h1>
             <div class="hamburger-icon">
                 <label for="checkbox-menu"></label>
             </div>
@@ -19,11 +19,12 @@
         <input id="checkbox-menu" type="checkbox">
         <nav class="mobile-menu">
             <ul>
-                <li><a href="../alex/Events.html">Events</a></li>
-                <li><a href="../alex/Promotions.html">Promotions</a></li>
-                <li><a href="../shawn/facilities1.html">Facilities</a></li>
-                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
-                <li><a href="../IAN/restrauant1.html">Dining</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="alex/Events.html">Events</a></li>
+                <li><a href="alex/Promotions.html">Promotions</a></li>
+                <li><a href="shawn/facilities1.html">Facilities</a></li>
+                <li><a href="aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="IAN/restrauant1.html">Dining</a></li>
             </ul>
         </nav>
     </div>
@@ -32,12 +33,12 @@
         <div>
             <ul>
                 <li style="font-size:150%"><a class="hotel" href="./index.html">HIVE</a></li>
-                <li><a href="../alex/Events.html">Events</a></li>
-                <li><a href="../alex/Promotions.html">Promotions</a></li>
-                <li><a href="../shawn/facilities1.html">Facilities</a></li>
-                <li><a href="../aniq/HotelRooms.html">Rooms</a></li>
-                <li><a href="../IAN/restrauant1.html">Dining</a></li>
-                <li><a href="../aniq/HotelRoomsReservation.html" class="book"> BOOK NOW</a></li>
+                <li><a href="./alex/Events.html">Events</a></li>
+                <li><a href="./alex/Promotions.html">Promotions</a></li>
+                <li><a href="./shawn/facilities1.html">Facilities</a></li>
+                <li><a href="./aniq/HotelRooms.html">Rooms</a></li>
+                <li><a href="./IAN/restrauant1.html">Dining</a></li>
+                <li><a href="./aniq/HotelRoomsReservation.html" class="book"> BOOK NOW</a></li>
             </ul>
         </div>
     </nav>
@@ -77,20 +78,19 @@
         </div>
 
 
-
+        <center><h3>ROOMS & SUITES</h3></center> 
         <div class="rooms-suites">
-            <center><h3>ROOMS & SUITES</h3></center> 
+            
 
 
             <img src="./images/penthouse.1800x1100.jpg" style="width:60%; border:5px solid rgba(0,0,200,0.5)" alt="">
 
 
-            <div class="room">
-                <p>Our rooms are amazing and cool we have the best facilities and clean showers to facilitate our customers.</p>
+            <div class="room" style="padding-bottom: 50px;">
+                <p style="padding:20px 0;">Our rooms are amazing and cool we have the best facilities and clean showers to facilitate our customers.</p>
                 <button class="room-btn" onclick="window.location.href='../aniq/HotelRooms.html'">Suites > </button>
                 <button class="room-btn" onclick="window.location.href='../aniq/HotelRooms.html'">Penthouse > </button>
                 <button class="room-btn" onclick="window.location.href='../aniq/HotelRooms.html'">Luxury > </button>
-                <a href="../aniq/HotelRoomsReservation.html" class="discover">Discover More</a>
             </div>
             
           
@@ -141,7 +141,7 @@
                     adultvalue += 1;
                     document.getElementById(who).innerHTML = adultvalue;
                 }
-            }
+            }   
 
             function Decrease(who) {
                 var adultvalue = parseInt(document.getElementById(who).innerHTML);
@@ -163,8 +163,7 @@
                 if (budget <= 0) {
                     var span = document.getElementById('span');
                     span.innerHTML = "warning no negative numbers";
-                    span.style.color = 'red';
-                    
+                    span.style.color = 'red';   
                 }
            
                 
@@ -178,6 +177,9 @@
                     }
 
                     
+                    if (room_list.length == 0) {
+                        room_list = 'None';
+                    }
 
                     document.getElementById('span').innerHTML = room_list;
                     document.getElementById('span').style.color = 'black';
